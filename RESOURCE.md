@@ -17,3 +17,5 @@ kubeletとコンテナランタイムをもつ
 
 ## LabelSelector
 Serviceの対象となるPODのセットをけてtする
+
+## replicaSetとは`

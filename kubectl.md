@@ -1,8 +1,9 @@
 ```sh
-kubectl get .. list
+kubectl get .. 
 kubectl describe ... 
 kubectl logs ...
 kubectl exec 
+kubectl get event
 ```
 
 ```sh
