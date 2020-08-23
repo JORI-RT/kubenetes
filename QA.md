@@ -7,7 +7,7 @@
 * NodeIP：NodePortでアクセスできるってことは、
 * 中から外にアクセスするときに使うタイプっぽい木がする
 [Serviceの種類](https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/expose/expose-intro/)
-* 
+* ラベルとselectorの使い分けというかどうつかっているかようわからん
 
 
 
