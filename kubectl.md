@@ -4,6 +4,7 @@ kubectl describe ...
 kubectl logs ...
 kubectl exec 
 kubectl get event
+kubectl config set-context --current --namespace=<insert-namespace-name-here>
 ```
 
 ```sh

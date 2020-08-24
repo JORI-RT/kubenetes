@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: docker-hello-world
+  name: docker-hello-world
+  labels:
+    name: docker-hello-world
+    role: web
+spec:
+  minReadySeconds: 30
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  replicas: 10
+  template:
+    metadata:
+      name: docker-hello-world
+      labels:
+        name: docker-hello-world
+        role: web
+    spec:
+      containers:
+      - image: koudaiii/hello-world:latest
+        name: docker-hello-world
+        resources:
+          requests:
+            cpu: 1
+            memory: 1G
+          limits:
+            cpu:  2
+            memory: 1G
+        ports:
+          - containerPort: 8080
+        env:
+          - name: MESSAGE
+            value: Hello Wantedly
