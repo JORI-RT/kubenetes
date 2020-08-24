@@ -5,6 +5,11 @@ kubectl logs ...
 kubectl exec 
 kubectl get event
 kubectl config set-context --current --namespace=<insert-namespace-name-here>
+k rollout restart deploy deploymentの名前
+# manifestの構造
+k explain pod.spec --recursive
+# manifestの説明
+k explain pod.spec
 ```
 
 ```sh
