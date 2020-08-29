@@ -19,3 +19,10 @@ kubeletとコンテナランタイムをもつ
 Serviceの対象となるPODのセットをけてtする
 
 ## replicaSetとは`
+
+
+## Volumeとは
+Dockerより厳密に管理されたもの？
+### pod.spec.volumes.emptyDir
+PODがNODEに割り当てられたとき、作成される
+おそらくPOD同士で共有はできない
