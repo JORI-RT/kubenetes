@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bootcamp-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: bootcamp-app
+  template:
+    metadata:
+      labels:
+        app: bootcamp-app
+    spec:
+      containers:
+        - name: kubernetes-bootcamp
+          image: docker.io/jocatalin/kubernetes-bootcamp:v1
+          ports:
+            - containerPort: 8080
