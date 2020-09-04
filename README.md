@@ -7,3 +7,5 @@
 [resource](RESOURCE.md)
 ## QA
 [QA](QA.md)
+## comamnd 
+[kubectl](kubectl.md)

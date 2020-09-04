@@ -26,3 +26,16 @@ Dockerより厳密に管理されたもの？
 ### pod.spec.volumes.emptyDir
 PODがNODEに割り当てられたとき、作成される
 おそらくPOD同士で共有はできない
+### PRRSISTENCE_VOLUME
+NODEみたいにADMIN権限でプロビジョニングされる
+S3にたいなもの
+hostPathはSingleNodeでしかうまく動かない
+```
+k explain PersistentVolume.spec
+```
+### PRRSISTENCE_VOLUME_CLIAM
+PVCはPVを消費する
+
+## Secret
+Base64エンコードされる
+他のマニフェストとは違うリポジトリとかで管理しないいけない
