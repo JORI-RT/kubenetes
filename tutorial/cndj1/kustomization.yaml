@@ -1,0 +1,47 @@
+# ----------------------------------------------------
+# apiVersion and kind of Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Adds namespace to all resources.
+namespace: koa-sample ### namespaceは予めつくっていないとエラーになる
+
+# Value of this field is prepended to the
+# names of all resources, e.g. a deployment named
+# "wordpress" becomes "alices-wordpress".
+namePrefix: jori-
+
+# Value of this field is appended to the
+# names of all resources, e.g. a deployment named
+# "wordpress" becomes "wordpress-v2".
+# The suffix is appended before content hash
+# if resource type is ConfigMap or Secret.
+nameSuffix: -v1
+
+# Labels to add to all resources and selectors.
+commonLabels:
+  owner: jori
+  context: koa-sample
+
+# Annotations (non-identifying metadata)
+# to add to all resources.  Like labels,
+# these are key value pairs.
+# commonAnnotations:
+#   oncallPager: 800-555-1212
+
+# Each entry in this list must resolve to an existing
+# resource definition in YAML.  These are the resource
+# files that kustomize reads, modifies and emits as a
+# YAML string, with resources separated by document
+# markers ("---").
+resources:
+  ## DB周りのリソース
+  - cndjp2/koa-sample/deployment/db-pv-hostpath.yaml ## PVはノード上のリソースなので、APのリソースとはLSが異なる
+  - cndjp2/koa-sample/deployment/db-secret.yaml ## 本運用ではsecretは別運用すべき
+  - cndjp2/koa-sample/deployment/db-deployment.yaml ## Deployment, Service, PVCが入っている
+  ## APのリソース
+  - cndjp2/koa-sample/deployment/ap-deployment.yaml
+  ## Ingress
+  - cndjp2/koa-sample/deployment/web-default-backend.yaml
+  - cndjp2/koa-sample/deployment/web-rc-default.yaml
+  - cndjp2/koa-sample/deployment/web-ingress.yaml
