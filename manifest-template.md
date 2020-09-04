@@ -1,0 +1,1 @@
+* [kustomization.yaml](manifest-template/kustomization.yaml)

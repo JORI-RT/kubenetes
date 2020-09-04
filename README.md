@@ -9,3 +9,5 @@
 [QA](QA.md)
 ## comamnd 
 [kubectl](kubectl.md)
+## manifestのテンプレ
+[manifest-template](manifest-template.md)
