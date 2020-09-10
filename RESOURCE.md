@@ -1,10 +1,6 @@
 ## Deployment
 podの管理　ー＞　PODを監視して理想状態へもっていく役割
 
-## Service
-通常PODにはクラスタ内部のIPからしかアクセスできない
-PODを外部に公開するために必要
-selectorでServiceとなるPODを割り当てる
 
 ## POD
 論理的なホスト
@@ -42,5 +38,12 @@ Base64エンコードされる
 
 # Kustomize
 
-
 ## ingress
+
+## kube proxy
+それぞれのNODEに常駐するdeamon
+
+## Service
+通常PODにはクラスタ内部のIPからしかアクセスできない
+PODを外部に公開するために必要
+selectorでServiceとなるPODを割り当てる
