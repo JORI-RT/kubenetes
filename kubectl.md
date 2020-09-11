@@ -11,6 +11,7 @@ k rollout restart deploy deploymentの名前
 k explain pod.spec --recursive
 # manifestの説明
 k explain pod.spec
+k rollout restart deploy deployment名
 
 ```
 
