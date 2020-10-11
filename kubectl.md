@@ -13,6 +13,13 @@ k explain pod.spec --recursive
 k explain pod.spec
 k rollout restart deploy deployment名
 
+# クラスターの切り替え
+# ①コンテキストに設定されているクラスター一覧を取得
+kubectl config get-clusters
+# ②現在のクラスター確認
+kubectl config current-context
+# ③接続クラスター変更
+kubectl config use-context [cluster name]
 ```
 
 ```sh
