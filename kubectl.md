@@ -12,6 +12,8 @@ k explain pod.spec --recursive
 # manifestの説明
 k explain pod.spec
 k rollout restart deploy deployment名
+kubectl get componentstatuses
+
 
 # クラスターの切り替え
 # ①コンテキストに設定されているクラスター一覧を取得
