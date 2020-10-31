@@ -4,7 +4,7 @@
   * kubectl-piyo ... kubectl piyoで実行可能
   * kubectl-piyo-poyo ... kubectl piyo poyoで実行可能
   * kubectl-piyo_bar ... kubectl piyo-barで実行できる
-
+* plugin作成用のライブラリ　　　https://github.com/kubernetes/cli-runtime
 ```sh
 # プラグインの作成
 echo -e '#!/bin/bash\n\necho "My first command-line argument was $1"' > kubectl-foo
