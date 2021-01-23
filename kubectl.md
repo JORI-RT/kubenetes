@@ -31,11 +31,6 @@ kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{
 
 
 ```sh
-## ヒアドキュメントの使い方
-#EOFまでをtestにリダイレクト 
-cat <<EOF > test
-line1
-line2
-line3
-EOF
+## PODを一括でけす
+k get pod | grep hoge | awd '{print $1}' | kubectl delete pod 
 ```
