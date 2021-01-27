@@ -39,3 +39,12 @@ stern kafka-service
 ## LINK
 [helmの公式サイト](https://helm.sh/docs/intro/quickstart/)
 [helmのinbubatorのURL](https://helm.sh/blog/new-location-stable-incubator-charts/)
+
+## 所管、やること
+helmをもう少しほってみる
+kafkaのアーキテクチャを理解する
+->TOPICから２つのCONSUMERでメッセージをPULLしたらどうなるか
+zookeeperとkafka-servcieの関係
+helmがdepricatedだらけだったのが気になる
+ちょっとしたツールならbashで作れそう
+ー＞ちょっとしたツールをメッセージングが必要な場面は思い浮かばないが、、、
